@@ -4,7 +4,7 @@ module OhMyEmbed
       # Soundcloud oembed documentation:
       # https://developers.soundcloud.com/docs/oembed
 
-      self.endpoint = 'http://soundcloud.com/oembed'
+      self.endpoint = 'https://soundcloud.com/oembed'
       self.schemes = [
         '//soundcloud.com/*',
         '//*.soundcloud.com/*',

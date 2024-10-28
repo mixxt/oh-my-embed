@@ -18,7 +18,7 @@ describe OhMyEmbed::Providers::Soundcloud do
         expect(response.type).to eq :rich
 
         expect(response.provider_name).to eq 'SoundCloud'
-        expect(response.provider_url).to eq 'http://soundcloud.com'
+        expect(response.provider_url).to eq 'https://soundcloud.com'
 
         expect(response.url).to eq content_url
 
@@ -26,11 +26,11 @@ describe OhMyEmbed::Providers::Soundcloud do
 
         expect(response.author).to eq({
           name: 'Forss',
-          url: 'http://soundcloud.com/forss',
+          url: 'https://soundcloud.com/forss',
         })
 
         expect(response.thumbnail).to eq({
-          url: 'http://i1.sndcdn.com/artworks-000067273316-smsiqx-t500x500.jpg',
+          url: 'https://i1.sndcdn.com/artworks-000067273316-smsiqx-t500x500.jpg',
           width: nil,
           height: nil,
         })

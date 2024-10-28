@@ -23,11 +23,10 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'activesupport', '>= 3.2.21'
 
-  spec.add_development_dependency 'bundler', '~> 1.12'
-  spec.add_development_dependency 'rake', '~> 11.1.2'
-  spec.add_development_dependency 'rspec', '~> 3.4.0'
-  spec.add_development_dependency 'webmock', '~> 2.0.1'
-  spec.add_development_dependency 'vcr', '~> 3.0.1'
-  spec.add_development_dependency 'simplecov', '~> 0.11.2'
-  spec.add_development_dependency 'codeclimate-test-reporter', '~> 0.5.0'
+  spec.add_development_dependency 'rake', '~> 13.2.1'
+  spec.add_development_dependency 'rspec', '~> 3.13.0'
+  spec.add_development_dependency 'webmock', '~> 3.24.0'
+  spec.add_development_dependency 'vcr', '~> 6.3.1'
+  # spec.add_development_dependency 'simplecov', '~> 0.11.2'
+  # spec.add_development_dependency 'codeclimate-test-reporter', '~> 0.5.0'
 end

@@ -59,20 +59,23 @@ module OhMyEmbed
         raise OhMyEmbed::Error.new('Request timed out')
       end
 
-      case response
-        when Net::HTTPUnauthorized
-          raise OhMyEmbed::PermissionDenied.new(url)
-        when Net::HTTPNotFound
-          raise OhMyEmbed::NotFound.new(url)
-        when Net::HTTPNotImplemented
-          raise OhMyEmbed::FormatNotSupported.new(self.name)
-        when Net::HTTPOK
-          begin
-            response_data = JSON.parse(response.body)
-          rescue
-            raise OhMyEmbed::ParseError.new(self.name, url, response.body)
-          end
-      end
+      response_data =
+        case response
+          when Net::HTTPUnauthorized
+            raise OhMyEmbed::PermissionDenied.new(url)
+          when Net::HTTPNotFound
+            raise OhMyEmbed::NotFound.new(url)
+          when Net::HTTPNotImplemented
+            raise OhMyEmbed::FormatNotSupported.new(self.name)
+          when Net::HTTPOK
+            begin
+              JSON.parse(response.body)
+            rescue
+              raise OhMyEmbed::ParseError.new(self.name, url, response.body)
+            end
+          else
+            raise OhMyEmbed::Error, "Unexpected response status #{response.status}"
+        end
 
       OhMyEmbed::Response.new(self, url, response_data)
     end
