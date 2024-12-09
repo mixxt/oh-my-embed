@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://embed.spotify.com/oembed/?format=json&url=http://open.spotify.com/track/298gs9ATwr2rD9tGYJKlQR
+    uri: https://embed.spotify.com/oembed?format=json&url=http://open.spotify.com/track/298gs9ATwr2rD9tGYJKlQR
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Ruby/2.2.3
+      - Ruby/3.3.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -20,32 +20,52 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx
-      Date:
-      - Tue, 10 May 2016 17:27:40 GMT
+      Origin-Trial:
+      - AjTBCzHiqtNU3PxD6GL8VpVl68/SfxkZJuLQbbyvSNj6/o9VuhZ5EPb/2dTYqi+Mot0AD6XOHBeIatAwEt4lAQcAAABOeyJvcmlnaW4iOiJodHRwczovL29wZW4uc3BvdGlmeS5jb206NDQzIiwiZmVhdHVyZSI6IlRwY2QiLCJleHBpcnkiOjE3MzUzNDM5OTl9
+      Critical-Origin-Trial:
+      - Tpcd
+      Set-Cookie:
+      - sp_landing=http%3A%2F%2Fembed.spotify.com%2Foembed%3Fsp_cid%3Da0f3176a0cef943e10248f0155e19e32%26device%3Ddesktop;
+        Path=/; Expires=Tue, 10 Dec 2024 13:59:00 GMT; Max-Age=86400; Domain=.spotify.com;
+        Secure; HttpOnly; SameSite=none
+      - sp_t=a0f3176a0cef943e10248f0155e19e32; Path=/; Expires=Tue, 09 Dec 2025 13:59:00
+        GMT; Max-Age=31536000; Domain=.spotify.com; Secure; SameSite=none
+      X-Middleware-Set-Cookie:
+      - sp_t=a0f3176a0cef943e10248f0155e19e32; Path=/; Expires=Tue, 09 Dec 2025 13:59:00
+        GMT; Max-Age=31536000; Domain=.spotify.com; Secure; SameSite=none,sp_landing=http%3A%2F%2Fembed.spotify.com%2Foembed%3Fsp_cid%3Da0f3176a0cef943e10248f0155e19e32%26device%3Ddesktop;
+        Path=/; Expires=Tue, 10 Dec 2024 13:59:00 GMT; Max-Age=86400; Domain=.spotify.com;
+        Secure; HttpOnly; SameSite=none
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Keep-Alive:
-      - timeout=10
+      Access-Control-Allow-Origin:
+      - "*"
       Vary:
       - Accept-Encoding
-      P3p:
-      - CP="NOI OUR"
+      Date:
+      - Mon, 09 Dec 2024 13:59:01 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '143'
+      Content-Security-Policy:
+      - 'base-uri ''none''; object-src ''none''; script-src ''nonce-38e4be1791a1482f9c04f3ff412baca1''
+        ''strict-dynamic'' ''unsafe-inline'' https:'
+      Server:
+      - envoy
+      Strict-Transport-Security:
+      - max-age=31536000
       X-Content-Type-Options:
       - nosniff
-      Strict-Transport-Security:
-      - max-age=31536000;
+      Via:
+      - HTTP/1.1 fringe, HTTP/2 edgeproxy, 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"provider_url":"https:\/\/www.spotify.com","version":"1.0","thumbnail_width":300,"height":380,"thumbnail_height":300,"title":"John
-        De Sohn - Dance Our Tears Away - Radio Edit","width":300,"thumbnail_url":"https:\/\/d3rt1990lpmkn.cloudfront.net\/cover\/35ff8ecde854e7c713dc4ffad2f31441e7bc1207","provider_name":"Spotify","type":"rich","html":"<iframe
-        src=\"https:\/\/embed.spotify.com\/?uri=spotify:track:298gs9ATwr2rD9tGYJKlQR\"
-        width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"><\/iframe>"}'
-    http_version: 
-  recorded_at: Tue, 10 May 2016 17:27:40 GMT
-recorded_with: VCR 3.0.1
+      string: '{"html":"<iframe style=\"border-radius: 12px\" width=\"100%\" height=\"152\"
+        title=\"Spotify Embed: Dance Our Tears Away (feat. Kristin Amparo) - Radio
+        Edit\" frameborder=\"0\" allowfullscreen allow=\"autoplay; clipboard-write;
+        encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" src=\"https://open.spotify.com/embed/track/298gs9ATwr2rD9tGYJKlQR?utm_source=oembed\"></iframe>","iframe_url":"https://open.spotify.com/embed/track/298gs9ATwr2rD9tGYJKlQR?utm_source=oembed","width":456,"height":152,"version":"1.0","provider_name":"Spotify","provider_url":"https://spotify.com","type":"rich","title":"Dance
+        Our Tears Away (feat. Kristin Amparo) - Radio Edit","thumbnail_url":"https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02dc7755f577f76b1207e8d9f7","thumbnail_width":300,"thumbnail_height":300}'
+  recorded_at: Mon, 09 Dec 2024 13:59:00 GMT
+recorded_with: VCR 6.3.1
