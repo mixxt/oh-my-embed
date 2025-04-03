@@ -74,7 +74,7 @@ module OhMyEmbed
               raise OhMyEmbed::ParseError.new(self.name, url, response.body)
             end
           else
-            raise OhMyEmbed::Error, "Unexpected response status #{response.status}"
+            raise OhMyEmbed::Error, "Unexpected response status #{response.code}"
         end
 
       OhMyEmbed::Response.new(self, url, response_data)
